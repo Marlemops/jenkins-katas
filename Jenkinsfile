@@ -19,15 +19,10 @@ pipeline {
           }
           steps {
             sh 'ci/build-app.sh'
+            archiveArtifacts 'app/build/libs/'
           }
         }
 
-      }
-    }
-
-    stage('Build App') {
-      steps {
-        archiveArtifacts 'jenkins-katas/app/build/libs/'
       }
     }
 
