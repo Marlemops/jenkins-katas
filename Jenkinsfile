@@ -27,7 +27,7 @@ pipeline {
 
     stage('Build App') {
       steps {
-        archiveArtifacts 'app/build/libs/'
+        archiveArtifacts 'jenkins-katas/app/build/libs/'
       }
     }
 
